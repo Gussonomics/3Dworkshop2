@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IQMED Innovation - 3D Printing & AI Workshops</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                dark: "#0f172a",
+                purple: "#6b21a8",
+                orange: "#f97316",
+                yellow: "#fbbf24",
+                light: "#f8fafc",
+                blue: "#2563eb" /* Added for new logo matching */,
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .gradient-text {
+        background: linear-gradient(to right, #fbbf24, #f97316);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .hero-bg {
+        background: linear-gradient(
+            rgba(15, 23, 42, 0.9),
+            rgba(15, 23, 42, 0.95)
+          ),
+          url("https://images.unsplash.com/photo-1631555476020-043c7b60e640?q=80&w=2070&auto=format&fit=crop");
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-slate-800">
+    <!-- Navigation (Updated to White for Logo Visibility) -->
+    <nav class="bg-white sticky top-0 z-50 shadow-md">
+      <div
+        class="container mx-auto px-6 py-3 flex justify-between items-center"
+      >
+        <!-- New Logo Section -->
+        <a href="#" class="flex items-center gap-2">
+          <img src="images/328650.jpg" class="h-12 w-auto object-contain" />
+        </a>
+
+        <div class="hidden md:flex space-x-8">
+          <a
+            href="#upcoming"
+            class="text-gray-700 hover:text-brand-orange transition font-medium"
+            >Upcoming Course</a
+          >
+          <a
+            href="#details"
+            class="text-gray-700 hover:text-brand-orange transition font-medium"
+            >Details</a
+          >
+          <a
+            href="#past-events"
+            class="text-gray-700 hover:text-brand-orange transition font-medium"
+            >Past Events</a
+          >
+          <a
+            href="#faq"
+            class="text-gray-700 hover:text-brand-orange transition font-medium"
+            >FAQ</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-700 hover:text-brand-orange transition font-medium"
+            >Contact</a
+          >
+        </div>
+        <a
+          href="https://forms.gle/yFERz2UQs55va58G6"
+          target="_blank"
+          class="bg-brand-orange hover:bg-orange-600 text-white px-5 py-2 rounded-full font-semibold transition shadow-lg transform hover:scale-105"
+        >
+          Register Now
+        </a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-bg text-white py-20 lg:py-32">
+      <div class="container mx-auto px-6 text-center">
+        <span
+          class="inline-block py-1 px-3 rounded-full bg-brand-purple bg-opacity-50 border border-brand-purple text-sm font-semibold mb-6"
+        >
+          🔥 Batch 2: Back by Popular Demand!
+        </span>
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+          Beginner Course (Batch 2):
+          <span class="gradient-text">3D Printing</span> & <br />
+          Digital Fabrication
+        </h1>
+        <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+          Join the 2nd intake of our highly rated course. Explore 3D printing
+          and digital fabrication using generative AI to design, model, and
+          make.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="https://forms.gle/yFERz2UQs55va58G6"
+            target="_blank"
+            class="bg-brand-yellow text-brand-dark px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition shadow-lg"
+          >
+            Secure Seat - 1,500 THB
+          </a>
+          <a
+            href="#details"
+            class="border border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-brand-dark transition"
+          >
+            View Syllabus
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Upcoming Workshop Details -->
+    <section id="upcoming" class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col lg:flex-row gap-12 items-center">
+          <!-- Image/Flyer Area -->
+          <div class="lg:w-1/2">
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl group">
+              <!-- Placeholder for the actual flyer image -->
+              <div
+                class="bg-brand-dark h-96 flex items-center justify-center text-center p-8 relative overflow-hidden"
+              >
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-brand-purple to-brand-dark opacity-90"
+                ></div>
+                <div class="relative z-10">
+                  <h3 class="text-3xl font-bold text-white mb-2">Jan 17</h3>
+                  <p class="text-brand-yellow text-xl font-bold mb-6">2026</p>
+                  <p class="text-gray-300">KX Knowledge Xchange</p>
+                  <div class="mt-8">
+                    <span class="text-5xl font-bold text-white">1,500</span>
+                    <span class="text-xl text-brand-yellow">THB</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-brand-orange text-white text-center py-2 font-bold"
+              >
+                Batch 2 - Filling Fast!
+              </div>
+            </div>
+          </div>
+
+          <!-- Text Details -->
+          <div class="lg:w-1/2" id="details">
+            <h2 class="text-3xl font-bold text-brand-dark mb-2">
+              Upcoming Workshop Details
+            </h2>
+            <h3 class="text-xl font-semibold text-brand-purple mb-4">
+              Course: Principles of 3D Printing & Digital Fabrication
+            </h3>
+
+            <!-- Trust signal added here -->
+            <div
+              class="bg-green-50 border border-green-200 rounded-lg p-4 mb-6"
+            >
+              <p class="text-green-800 text-sm font-semibold">
+                <i class="fa-solid fa-star text-yellow-500 mr-1"></i>
+                Building on the sold-out success of Batch 1, we have optimized
+                the curriculum for an even better experience.
+              </p>
+            </div>
+
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="bg-blue-100 p-3 rounded-lg text-blue-600">
+                  <i class="fa-regular fa-calendar-days text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-lg">Date & Time</h4>
+                  <p class="text-gray-600">Saturday, January 17, 2026</p>
+                  <p class="text-gray-600">10:00 - 15:30</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="bg-red-100 p-3 rounded-lg text-red-600">
+                  <i class="fa-solid fa-location-dot text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-lg">Location</h4>
+                  <p class="text-gray-600">KX Knowledge Xchange</p>
+                  <p class="text-sm text-gray-500">(Near BTS Wongwian Yai)</p>
+                </div>
+              </div>
+
+              <div class="flex items-start gap-4">
+                <div class="bg-purple-100 p-3 rounded-lg text-purple-600">
+                  <i class="fa-solid fa-wand-magic-sparkles text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-lg">What You Will Learn</h4>
+                  <ul
+                    class="list-disc list-inside text-gray-600 mt-2 space-y-1"
+                  >
+                    <li>Fundamentals of 3D Printing (FDM/SLA)</li>
+                    <li>Using Generative AI to create 3D models</li>
+                    <li>Slicing software & pre-print setup</li>
+                    <li>Hands-on troubleshooting & maintenance</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Join Us Section -->
+    <section class="py-16 bg-brand-light border-y border-gray-200">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-brand-dark mb-12">
+          Why Join Us?
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8 text-center">
+          <!-- Card 1 -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-lg hover:-translate-y-2 transition duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-brand-orange text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl shadow-md"
+            >
+              <i class="fa-solid fa-hands-holding-circle"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Hands-on Project</h3>
+            <p class="text-gray-600">
+              Don't just listen—create. You will design, slice, and print your
+              own object during the workshop.
+            </p>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-lg hover:-translate-y-2 transition duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-brand-purple text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl shadow-md"
+            >
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Small Groups</h3>
+            <p class="text-gray-600">
+              We keep class sizes small (max 20) to ensure every learner gets
+              personalized guidance from our experts.
+            </p>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-lg hover:-translate-y-2 transition duration-300"
+          >
+            <div
+              class="w-16 h-16 bg-brand-yellow text-brand-dark rounded-full flex items-center justify-center mx-auto mb-6 text-2xl shadow-md"
+            >
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Career Skills</h3>
+            <p class="text-gray-600">
+              Master the "AI + Hardware" workflow that is becoming essential in
+              design, engineering, and manufacturing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who Should Join -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <div
+          class="bg-brand-dark rounded-2xl p-8 md:p-12 text-white flex flex-col md:flex-row items-center gap-12 shadow-2xl overflow-hidden relative"
+        >
+          <!-- Background decorative element -->
+          <div
+            class="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-brand-purple rounded-full opacity-20 blur-3xl"
+          ></div>
+
+          <div class="md:w-1/2 relative z-10">
+            <h2 class="text-3xl font-bold mb-6">Who Should Join?</h2>
+            <p class="text-gray-300 mb-8">
+              This course is designed for beginners and enthusiasts who want to
+              unlock their creativity.
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-center gap-4">
+                <div class="bg-brand-yellow text-brand-dark rounded-full p-1">
+                  <i class="fa-solid fa-check text-sm"></i>
+                </div>
+                <span class="text-lg">Students & Educators</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="bg-brand-yellow text-brand-dark rounded-full p-1">
+                  <i class="fa-solid fa-check text-sm"></i>
+                </div>
+                <span class="text-lg">Hobbyists & Makers</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="bg-brand-yellow text-brand-dark rounded-full p-1">
+                  <i class="fa-solid fa-check text-sm"></i>
+                </div>
+                <span class="text-lg">Entrepreneurs & Product Designers</span>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="bg-brand-yellow text-brand-dark rounded-full p-1">
+                  <i class="fa-solid fa-check text-sm"></i>
+                </div>
+                <span class="text-lg"
+                  >Anyone curious about AI & 3D Printing!</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="md:w-1/2 relative z-10">
+            <img
+              src="images/whojoin.png"
+              alt="3D Printing Workshop"
+              class="rounded-xl shadow-lg border-4 border-brand-purple/30"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Meet The Trainers -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold text-brand-dark mb-4">
+          Meet Your Trainers
+        </h2>
+        <p class="text-gray-600 mb-12 max-w-2xl mx-auto">
+          Learn from industry experts with years of experience in digital
+          fabrication.
+        </p>
+
+        <div class="flex flex-col md:flex-row justify-center gap-8">
+          <!-- Trainer 1 -->
+          <div
+            class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-brand-orange md:w-1/3 hover:shadow-xl transition"
+          >
+            <div
+              class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden border-2 border-brand-orange"
+            >
+              <!-- Placeholder Avatar -->
+              <img
+                src="images/ting.png"
+                alt="Mr. Rattapong"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <h3 class="text-xl font-bold text-brand-dark">
+              Mr. Rattapong Lord Thong
+            </h3>
+            <p
+              class="text-brand-orange font-bold text-sm uppercase tracking-wide mb-3"
+            >
+              Lead Instructor
+            </p>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Expert in Digital Fabrication technologies with extensive
+              experience in FDM and SLA printing processes.
+            </p>
+          </div>
+          <!-- Trainer 2 -->
+          <div
+            class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-brand-purple md:w-1/3 hover:shadow-xl transition"
+          >
+            <div
+              class="w-32 h-32 bg-gray-200 rounded-full mx-auto mb-6 overflow-hidden border-2 border-brand-purple"
+            >
+              <!-- Placeholder Avatar -->
+              <img
+                src="images/smart.png"
+                alt="Mr. Itthikorn"
+                class="w-full h-full object-cover object-top"
+              />
+            </div>
+            <h3 class="text-xl font-bold text-brand-dark">
+              Mr. Itthikorn Prakaisak
+            </h3>
+            <p
+              class="text-brand-purple font-bold text-sm uppercase tracking-wide mb-3"
+            >
+              AI & Design Specialist
+            </p>
+            <p class="text-gray-500 text-sm leading-relaxed">
+              Specializing in Generative AI workflows, helping students turn
+              complex ideas into 3D printable models.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-brand-dark mb-4">
+          Gallery of Awesome Prints
+        </h2>
+        <p class="text-center text-gray-500 mb-10">
+          See what's possible when creativity meets technology.
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="h-56 rounded-lg overflow-hidden relative group shadow-md">
+            <img
+              src="images/model1.jpg"
+              class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition duration-300"
+            ></div>
+          </div>
+          <div class="h-56 rounded-lg overflow-hidden relative group shadow-md">
+            <img
+              src="images/model2.jpg"
+              class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition duration-300"
+            ></div>
+          </div>
+          <div class="h-56 rounded-lg overflow-hidden relative group shadow-md">
+            <img
+              src="images/model3.jpg"
+              class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition duration-300"
+            ></div>
+          </div>
+          <div class="h-56 rounded-lg overflow-hidden relative group shadow-md">
+            <img
+              src="images/Model4.jpg"
+              class="w-full h-full object-cover transition duration-500 group-hover:scale-110"
+            />
+            <div
+              class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition duration-300"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Past Events (Trust Builder) -->
+    <section id="past-events" class="py-16 bg-gray-100">
+      <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-brand-dark">Previous Workshops</h2>
+          <p class="text-gray-600 mt-2">
+            Join our growing community of makers.
+          </p>
+        </div>
+
+        <div
+          class="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden flex flex-col md:flex-row"
+        >
+          <div
+            class="md:w-1/3 bg-gray-200 h-64 md:h-auto flex items-center justify-center overflow-hidden"
+          >
+            <img
+              src="images/work1.jpg"
+              alt="Workshop Completed"
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="p-8 md:w-2/3">
+            <div
+              class="uppercase tracking-wide text-sm text-brand-purple font-semibold"
+            >
+              Completed
+            </div>
+            <h3 class="block mt-1 text-lg leading-tight font-bold text-black">
+              Principles of 3D Printing & Digital Fabrication
+            </h3>
+            <p class="mt-2 text-gray-500">
+              Held at FabLab Bangkok on November 1, 2025. A sold-out session
+              where students learned the core mechanics of additive
+              manufacturing.
+            </p>
+            <div class="mt-4 flex items-center text-gray-500 text-sm">
+              <i class="fa-solid fa-users mr-2"></i> 20+ Attendees graduated
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-16 bg-brand-dark text-white relative">
+      <div class="container mx-auto px-6 max-w-4xl">
+        <h2 class="text-3xl font-bold text-center mb-12">
+          Frequently Asked Questions
+        </h2>
+
+        <div class="space-y-6 text-gray-800">
+          <!-- FAQ 1 -->
+          <div
+            class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-brand-orange"
+          >
+            <h3
+              class="text-xl font-bold text-brand-dark mb-2 flex items-center"
+            >
+              <i
+                class="fa-regular fa-circle-question text-brand-orange mr-3"
+              ></i>
+              Do I need prior knowledge?
+            </h3>
+            <p class="text-gray-600 ml-8">
+              Not at all! This course is specifically designed for beginners. We
+              start from the absolute basics of how 3D printing works and guide
+              you step-by-step through the AI tools.
+            </p>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div
+            class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-brand-purple"
+          >
+            <h3
+              class="text-xl font-bold text-brand-dark mb-2 flex items-center"
+            >
+              <i class="fa-solid fa-print text-brand-purple mr-3"></i>
+              Do I need my own 3D Printer?
+            </h3>
+            <p class="text-gray-600 ml-8">
+              No, you don't. We provide all the necessary 3D printers and
+              materials (filament/resin) at the workshop. You just need to bring
+              your enthusiasm!
+            </p>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div
+            class="bg-white rounded-xl p-6 shadow-lg border-l-4 border-brand-yellow"
+          >
+            <h3
+              class="text-xl font-bold text-brand-dark mb-2 flex items-center"
+            >
+              <i class="fa-solid fa-laptop text-brand-yellow mr-3"></i>
+              What computer specification do I need?
+            </h3>
+            <p class="text-gray-600 ml-8">
+              Please bring a laptop (Windows or Mac) with a mouse. You don't
+              need a supercomputer—any standard laptop that can browse the
+              internet (for AI tools) and install basic software (like a Slicer)
+              is sufficient.
+            </p>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <p class="text-gray-400 mb-4">Ready to join? Have more questions?</p>
+          <a
+            href="https://forms.gle/yFERz2UQs55va58G6"
+            target="_blank"
+            class="inline-block bg-brand-orange text-white px-8 py-3 rounded-full font-bold hover:bg-orange-600 transition"
+          >
+            Register Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer
+      id="contact"
+      class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800"
+    >
+      <div
+        class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center"
+      >
+        <div class="mb-6 md:mb-0">
+          <h4 class="text-white text-xl font-bold mb-2">
+            NextGenius Lab & IQMED Innovation
+          </h4>
+          <p>Empowering creators with future-ready skills.</p>
+          <p class="mt-2 text-sm">
+            To register, please contact us via Line or Facebook.
+          </p>
+        </div>
+        <div class="flex space-x-6">
+          <a
+            href="#"
+            class="hover:text-brand-orange transition flex items-center gap-2"
+          >
+            <i class="fa-brands fa-line text-2xl"></i> @iqmedlearn
+          </a>
+          <a
+            href="#"
+            class="hover:text-brand-orange transition flex items-center gap-2"
+          >
+            <i class="fa-solid fa-globe text-2xl"></i> www.iqmedlearn.com
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
